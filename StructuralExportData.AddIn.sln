@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralExportData.AddIn", "StructuralExportData.AddIn\StructuralExportData.AddIn.csproj", "{F26F18BE-D857-4417-9ED6-C2BA9D1B84AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralExportData.Repository", "StructuralExportData.Repository\StructuralExportData.Repository.csproj", "{9D067D3D-0BA9-42AD-99EA-2FBEB678B892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F26F18BE-D857-4417-9ED6-C2BA9D1B84AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26F18BE-D857-4417-9ED6-C2BA9D1B84AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26F18BE-D857-4417-9ED6-C2BA9D1B84AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26F18BE-D857-4417-9ED6-C2BA9D1B84AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D067D3D-0BA9-42AD-99EA-2FBEB678B892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D067D3D-0BA9-42AD-99EA-2FBEB678B892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D067D3D-0BA9-42AD-99EA-2FBEB678B892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D067D3D-0BA9-42AD-99EA-2FBEB678B892}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D354A78E-8B2F-4A07-8605-C3421EAE57A0}
+	EndGlobalSection
+EndGlobal

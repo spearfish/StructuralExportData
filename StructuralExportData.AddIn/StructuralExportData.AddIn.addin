@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command StructuralExportData.AddIn</Text>
+    <Description>Some description for StructuralExportData.AddIn</Description>
+    <Assembly>StructuralExportData.AddIn.dll</Assembly>
+    <FullClassName>StructuralExportData.AddIn.Command</FullClassName>
+    <ClientId>3cc861ac-5258-4f25-9568-d3a876f1957f</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application StructuralExportData.AddIn</Name>
+    <Assembly>StructuralExportData.AddIn.dll</Assembly>
+    <FullClassName>StructuralExportData.AddIn.App</FullClassName>
+    <ClientId>0ccda373-d9b4-4b94-a288-b8bd1516418b</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
