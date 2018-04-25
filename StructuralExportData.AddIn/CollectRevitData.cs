@@ -10,13 +10,12 @@ namespace StructuralExportData.AddIn
 {
     class CollectRevitData
     {
-        public List<string> _Parameters { get; set; }
+        internal List<string> _Parameters { get; set; }
 
         //***********************************GetElementParameterInformation***********************************
-        public List<Tuple<string, string>> GetElementParameterInformation(Document doc, Element element)
+        internal List<Tuple<string, string>> GetElementParameterInformation(Document doc, Element element)
         {
             List<string> Parameters = new List<string>();
-            String prompt = "Show parameters";
 
             var data = new List<Tuple<string, string>>();
             StringBuilder st = new StringBuilder();
@@ -32,8 +31,9 @@ namespace StructuralExportData.AddIn
                 if (!Parameters.Contains(NameAndData.Item1))
                     Parameters.Add(NameAndData.Item1);
             }
-
-            TaskDialog.Show("Revit", prompt + st.ToString());
+            //Debug
+            //String prompt = "Show parameters";
+            //TaskDialog.Show("Revit", prompt + st.ToString());
             _Parameters = Parameters;
             return data;
         }
@@ -48,7 +48,8 @@ namespace StructuralExportData.AddIn
             {
                 case StorageType.Double:
                     //covert the number into Metric
-                    defValue = para.AsValueString();
+                    double roundDouble = Math.Round(para.AsDouble(),3);
+                    defValue = roundDouble.ToString();
                     break;
                 case StorageType.ElementId:
                     //find out the name of the element

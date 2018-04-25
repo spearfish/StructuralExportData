@@ -10,11 +10,12 @@ namespace StructuralExportData.Repository
     public class ElementRepository : IElementRepository
     {
         private IList<DataElement> _Elements;
-
+        
         //***********************************CreateElement***********************************
-        public void CreateElement(Dictionary<string, List<Tuple<string, string>>> dictionary, List<string> CompleteParameters)
+        public void CreateElement(Dictionary<string, List<Tuple<string, string>>> dictionary, 
+            List<string> CompleteParameters)
         {
-            List<DataElement> Elements = new List<DataElement>();
+            List<DataElement> Elements = new List<DataElement>();            
 
             foreach (KeyValuePair<string, List<Tuple<string, string>>> entry in dictionary)
             {

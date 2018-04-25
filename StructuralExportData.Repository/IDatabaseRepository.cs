@@ -12,7 +12,7 @@ namespace StructuralExportData.Repository
         /// Create Database 
         /// </summary>
         /// <remarks>This will create a database</remarks>
-        void Create(IReadOnlyList<DataElement> dataElements);
+        void Create(IReadOnlyList<DataElement> dataElements, string type);
 
         /// <summary>
         /// Read Database 
@@ -24,7 +24,7 @@ namespace StructuralExportData.Repository
         /// Update the database
         /// </summary>
         /// <remarks>Update the database</remarks>
-        void Update();
+        void Write(IReadOnlyList<DataElement> dataElements);
 
         /// <summary>
         /// Delete the database

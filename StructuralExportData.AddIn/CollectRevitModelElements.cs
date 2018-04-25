@@ -10,15 +10,55 @@ namespace StructuralExportData.AddIn
 {
     class CollectRevitModelElements
     {
-        //***********************************GetStructuralFraming***********************************
-        public List<Element> GetStructuralFraming(Document doc)
+
+        //***********************************GetStructuralFramingElements***********************************
+        internal List<Element> GetStructuralFramingElements(Document doc)
         {
             List<Element> structuralFraming = GetElements(doc, BuiltInCategory.OST_StructuralFraming);
             return structuralFraming;
         }
+        //***********************************GetStructuralColumnElements***********************************
+        internal List<Element> GetStructuralColumnElements(Document doc)
+        {
+            List<Element> structuralColumns = GetElements(doc, BuiltInCategory.OST_StructuralColumns);
+            return structuralColumns;
+        }
+        //***********************************GetStructuralFoundationElements***********************************
+        internal List<Element> GetStructuralFoundationElements(Document doc)
+        {
+            List<Element> structuralFoundation = GetElements(doc, BuiltInCategory.OST_StructuralFoundation);
+            return structuralFoundation;
+        }
+        //***********************************GetSlabElements***********************************
+        internal List<Element> GetSlabElements(Document doc)
+        {
+            List<Element> slabs = new List<Element>();
+
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ICollection<Element> floors = collector.OfClass(typeof(Floor)).ToElements();
+
+            foreach (Element f in floors)
+                slabs.Add(f);
+
+            return slabs;
+        }
+
+        //***********************************GetWallElements***********************************
+        internal List<Element> GetWallElements(Document doc)
+        {
+            List<Element> walls = new List<Element>();
+
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            ICollection<Element> Walls = collector.OfClass(typeof(Wall)).ToElements();
+
+            foreach (Wall w in Walls)
+                walls.Add(w);
+
+            return walls;
+        }
 
         //***********************************GetFirstElement***********************************
-        public List<Element> GetElements(Document doc, BuiltInCategory category)
+        private List<Element> GetElements(Document doc, BuiltInCategory category)
         {
             List<Element> elements = new List<Element>();
             ElementClassFilter familyInstanceFilter = new ElementClassFilter(typeof(FamilyInstance));
